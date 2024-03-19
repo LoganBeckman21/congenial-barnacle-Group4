@@ -23,6 +23,13 @@
 + **Major:** Computer Information Systems
 - **Expirience:** I possess expertise in software development, database management, network administration, cybersecurity, and strategic IT planning. Whether it’s coding, database queries, system troubleshooting, or cybersecurity, I can provide assistance tailored to one’s needs in Computer Information Systems.
 
+# Office Hour Scheduler
+Welcome to our easy-to-use app that helps you book and manage office hours with your instructor.
+
+## User Stories
+### As a User
+**I want** to easily find and book office hours with my instructors,
+So that I can get the academic support I need in a timely and organized manner.
 
 
 
