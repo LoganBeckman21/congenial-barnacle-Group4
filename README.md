@@ -26,19 +26,3 @@
 
 
 
-Office hours CRUD application 
-
-- User Story
--
--
--
--  
--
--
-
-About 
-
-
-
-Logan beckman 
-- interest 
