@@ -3,10 +3,10 @@
 
 ### Janna Parker 
 [GitHub Profile](https://github.com/jparker13)
-**Ennegram:** Type 2️⃣, Helper.
-**Interest / Hobbies:** Twirling, painting, and playing with my dog Nova!
-**Major:** Information Technology, focusing in Cybersecurity
-**Expirience:** I have expirence in configuring Cisco Routers, switches, and soldiering. My software expirence in Windows / Linux, as well as coding languages: Python, Java Script, C, HTML, CSS, and PHP.
+- **Ennegram:** Type 2️⃣, Helper.
+* **Interest / Hobbies:** Twirling, painting, and playing with my dog Nova!
++ **Major:** Information Technology, focusing in Cybersecurity
+- **Expirience:** I have expirence in configuring Cisco Routers, switches, and soldiering. My software expirence in Windows / Linux, as well as coding languages: Python, Java Script, C, HTML, CSS, and PHP.
 
 
 ### Logan Beckman
