@@ -12,8 +12,8 @@
   "license": "ISC",
   "dependencies": {
     "ejs": "^3.1.9",
-    "express": "^4.18.2",
-    "node": "^21.6.1",
-    "nodemon": "^3.0.3"
+    "express": "^4.18.3",
+    "node": "^21.7.1",
+    "nodemon": "^3.1.0"
   }
 }

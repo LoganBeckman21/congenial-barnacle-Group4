@@ -1,17 +1,177 @@
-<h1>Hello World from EJS.</h1>
 
-<p>I\'m Logan Beckman.
+<style>
+
+    thead {
+        background-color: #333;
+        color: white;
+        font-size: 20px;
+        letter-spacing: 2%;
+    }
+
+
+
+    tbody th {
+        background-color: #36c;
+        color: #fff;
+        text-align: left;
+    }
+
+    caption {
+        border: 2px solid black;
+        padding: 8px;
+        text-align: center;
+        background-color: white;
+    }
+
+    td {
+        border: 2px solid black;
+        padding: 25px;
+        text-align: center;
+        background-color: yellow;
+
+    }
+    table {
+        width: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    body {
+        background-color: purple ;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+
+
+</style>
+
+<form>
+    <label for="class-period">Class Period:</label>
+    <select name="classTime" id="time">
+        <option value="CS440">CS 440</option>
+        <option value="CS455">CS 455</option>
+        <option value="ITE449">ITE 449</option>
+        
+      </select>
+
+    <button onclick = "displayScheduleTable()" type="submit">Submit</button>
+</form>
+
+<h2>Available Days and Times:</h2>
+
+<table>
+    <h3> CS 440</h3>
+    <thead>
+        <tr>
+            <th>Day</th>
+            <th>Time</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Monday</td>
+            <td>12:00 PM</td>
+            <td>12:30 PM</td>
+            <td>1:00 PM</td>
+            <td>1:30 PM</td>
+            <td>2:00 PM</td>
+        </tr>
+        
+        <tr>
+            <td>Wednesday</td>
+            <td>12:00 PM</td>
+            <td>12:30 PM</td>
+            <td>1:00 PM</td>
+            <td>1:30 PM</td>
+            <td>2:00 PM</td>
+        </tr>
+       
+        <tr>
+            <td>Friday</td>
+            <td>12:00 PM</td>
+            <td>12:30 PM</td>
+            <td>1:00 PM</td>
+            <td>1:30 PM</td>
+            <td>2:00 PM</td>
+        </tr>
+        <tr>
+          
+        </tr>
+    </tbody>
+</table> 
+
+<table>
+    <h3> CS 455</h3>
+    <thead>
+        <tr>
+            <th>Day</th>
+            <th>Time</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Tuesday</td>
+            <td>12:00 PM</td>
+            <td>12:30 PM</td>
+            <td>1:00 PM</td>
+            <td>1:30 PM</td>
+            <td>2:00 PM</td>
+        </tr>
+        
+        <tr>
+            <td>Thursday</td>
+            <td>12:00 PM</td>
+            <td>12:30 PM</td>
+            <td>1:00 PM</td>
+            <td>1:30 PM</td>
+            <td>2:00 PM</td>
+        </tr>
     
+    </tbody>
+</table> 
 
+<table>
+    <h3> ITE 449</h3>
+    <thead>
+        <tr>
+            <th>Day</th>
+            <th>Time</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Tuesday</td>
+            <td>12:00 PM</td>
+            <td>12:30 PM</td>
+            <td>1:00 PM</td>
+            <td>1:30 PM</td>
+            <td>2:00 PM</td>
+        </tr>
+        
+        <tr>
+            <td>Thursday</td>
+            <td>12:00 PM</td>
+            <td>12:30 PM</td>
+            <td>1:00 PM</td>
+            <td>1:30 PM</td>
+            <td>2:00 PM</td>
+        </tr>
     
-<li> I be <%= myTypeClient %>, good at mullet, bad at stop talking.</p>
+    </tbody>
+</table> 
 
+<form action = ""  method = "POST">
+    <label>Enter First Name: </label>
+    <input type="text" id="fname" name="fname">
+    <label>Enter Last Name: </label>
+    <input type="text" id="lname" name="lname">
+    <label>Enter Email: </label>
+    <input type="text" id="email" name="email">
+    <!--  -->
 
-
-    <footer> sent from a file on my node server, yo!
-
-    <a href="/send">send</a>
-    <a href="https://github.com/LoganBeckman21/legendary-fortnight-MikeLab"> Source Code</a>
 
 
 </footer>
