@@ -17,7 +17,7 @@
 - **Expirience:** Tier 1 IT Support Analysis for Hexagon, Automated System Design.
 
 ### Aditya Balyan
-[Github Profile](
+[Github Profile](https://github.com/adityaNYC)
 - **Ennegram:** Type 6️⃣, Loyalist 🤝
 * **Interest / Hobbies:** 
 + **Major:** Computer Information Systems
