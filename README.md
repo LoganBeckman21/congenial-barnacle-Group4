@@ -15,6 +15,9 @@ Welcome to our easy-to-use app that helps you book and manage office hours with 
 - Office hour times displayed in an easy to-read format.
 - A form for students to fill out.
 
+### [Team Members](https://github.com/LoganBeckman21/congenial-barnacle-Group4/wiki/Team-Attributions)
+### [Team Attributions]()
+
 
 
 
