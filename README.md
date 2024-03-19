@@ -1,35 +1,18 @@
-# BIG PRODUCT GROUP 4
-## Team Members:
-
-### Janna Parker 
-[GitHub Profile](https://github.com/jparker13)
-- **Ennegram:** Type 2️⃣, Helper 🙂
-* **Interest / Hobbies:** Twirling, painting, and playing with my dog Nova!
-+ **Major:** Information Technology, focusing in Cybersecurity
-- **Expirience:** I have expirence in configuring Cisco Routers, switches, and soldiering. My software expirence in Windows / Linux, as well as coding languages: Python, Java Script, C, HTML, CSS, and PHP.
-
-
-### Logan Beckman
-[Github Profile](https://github.com/LoganBeckman21)
-- **Ennegram:** Type 9️⃣, Peacemaker :v: 
-* **Interest / Hobbies:** Video games and sports activities.
-+ **Major:** Computer Information Sysytems
-- **Expirience:** Tier 1 IT Support Analysis for Hexagon, Automated System Design.
-
-### Aditya Balyan
-[Github Profile](https://github.com/adityaNYC)
-- **Ennegram:** Type 6️⃣, Loyalist 🤝
-* **Interest / Hobbies:** 
-+ **Major:** Computer Information Systems
-- **Expirience:** I possess expertise in software development, database management, network administration, cybersecurity, and strategic IT planning. Whether it’s coding, database queries, system troubleshooting, or cybersecurity, I can provide assistance tailored to one’s needs in Computer Information Systems.
-
 # Office Hour Scheduler
 Welcome to our easy-to-use app that helps you book and manage office hours with your instructor.
 
 ## User Stories
-### As a User
-**I want** to easily find and book office hours with my instructors,
-So that I can get the academic support I need in a timely and organized manner.
+### As a Student:
+**I want** to see when my instructors are avaialable and book a time to chat, so I can get help with my studies without any fuss.
+
+### As an Instructor:
+**I want** to set up my avaialable times for students to see, so I can organize my schedule and make sure I'm there when they need me.
+
+## Minimum Requirements
+
+- A welcome page where everyone starts.
+- Office hour times displayed in an easy to-read format.
+- A form for students to fill out.
 
 
 
