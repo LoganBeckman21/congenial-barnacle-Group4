@@ -11,17 +11,17 @@
 
 ### Logan Beckman
 [Github Profile](https://github.com/LoganBeckman21)
-**Ennegram:** Type 9️⃣, Peacemaker.
-**Interest / Hobbies:** Video games and sports activities.
-**Major:** Computer Information Sysytems
-**Expirience:** Tier 1 IT Support Analysis for Hexagon, Automated System Design.
+- **Ennegram:** Type 9️⃣, Peacemaker.
+* **Interest / Hobbies:** Video games and sports activities.
++ **Major:** Computer Information Sysytems
+- **Expirience:** Tier 1 IT Support Analysis for Hexagon, Automated System Design.
 
 ### Aditya Balyan
 [Github Profile](
-**Ennegram:** Type 6️⃣, Loyalist.
-**Interest / Hobbies:** 
-**Major:** Computer Information Systems
-**Expirience:** I possess expertise in software development, database management, network administration, cybersecurity, and strategic IT planning. Whether it’s coding, database queries, system troubleshooting, or cybersecurity, I can provide assistance tailored to one’s needs in Computer Information Systems.
+- **Ennegram:** Type 6️⃣, Loyalist.
+* **Interest / Hobbies:** 
++ **Major:** Computer Information Systems
+- **Expirience:** I possess expertise in software development, database management, network administration, cybersecurity, and strategic IT planning. Whether it’s coding, database queries, system troubleshooting, or cybersecurity, I can provide assistance tailored to one’s needs in Computer Information Systems.
 
 
 
