@@ -1,0 +1,152 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+h1 {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.form-select {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.select-class {
+    padding: 10px;
+    width: 200px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.btn-view {
+    padding: 10px 20px;
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.btn-view:hover {
+    background-color: #4cae4c;
+}
+
+.schedule-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Adjust the space between blocks */
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.time-block {
+    padding: 10px 20px;
+    background-color: #007bff; /* Bootstrap primary color */
+    color: white;
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0,0,0,.2); /* Simple shadow for depth */
+}
+
+.time-block span {
+    font-weight: bold;
+}
+
+/* ... existing styles ... */
+
+.time-slots {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px; /* Add spacing between buttons */
+}
+
+.time-slot-form {
+    margin: 5px;
+}
+
+.time-slot {
+    padding: 15px;
+    background-color: #007bff;
+    border: 1px solid #8ab8f5;
+    cursor: pointer;
+}
+
+.time-slot:hover {
+    background-color: #bbd2f5;
+}
+
+/* ... your existing CSS code ... */
+
+.go-back-container {
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.go-back-btn {
+    padding: 10px 20px;
+    background-color: #cccdce;
+    color: rgb(17, 17, 17);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px; 
+}
+
+.go-back-btn:hover {
+    background-color: #a4a5a5;
+}
+
+/* ... other styles ... */
+
+.form-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Adjust the gap between buttons */
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 20px;
+    text-align: center;
+}
+
+.submit-btn{
+    padding: 10px 20px;
+    background-color: #cccdce;
+    color: rgb(17, 17, 17);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px; /* Optional: Adjust the font size as needed */
+    width: 100px; /* Adjust width to make both buttons have the same width */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Optional: Adds a subtle shadow */
+}
+
+.submit-btn:hover{
+    background-color: #a4a5a5;
+}
+
+.time-slot.selected {
+    background-color: #4cae4c;
+    color: white;
+}
+
+.time-slot.booked {
+    background-color: #ccc;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Booking Confirmation</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="confirmation-container">
+        <h1>Booking Confirmation</h1>
+        <p>Thank you, <%= booking.name %>. Your booking for the course <%= booking.course %> is confirmed for:</p>
+        <p>Time: <%= booking.selectedTime %></p>
+        <p>Reason: <%= booking.reason %></p>
+        <button onclick="window.location.href='/'" class="go-back-btn">Go Back</button>
+    </div>
+</body>
+</html>

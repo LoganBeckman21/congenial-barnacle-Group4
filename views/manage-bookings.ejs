@@ -1,0 +1,21 @@
+<% bookings.forEach(booking => { %>
+    <div class="booking">
+      <p>Course: <%= booking.course %></p>
+      <p>Time: <%= booking.selectedTime %></p>
+      
+      <!-- Form to update a booking -->
+      <form action="/update-booking" method="post">
+        <input type="hidden" name="bookingId" value="<%= booking._id %>">
+        <input type="text" name="newName" placeholder="New Name" value="<%= booking.name %>">
+        <input type="text" name="newTime" placeholder="New Time" value="<%= booking.selectedTime %>">
+        <button type="submit">Update</button>
+      </form>
+  
+      <!-- Form to delete a booking -->
+      <form action="/delete-booking" method="post">
+        <input type="hidden" name="bookingId" value="<%= booking._id %>">
+        <button type="submit">Delete</button>
+      </form>
+    </div>
+  <% }); %>
+  

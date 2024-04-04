@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Schedule for <%= course %></title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="schedule-container">
+        <h1>Schedule for <%= course %></h1>
+        <% if(classTimes.length > 0) { %>
+            <div class="time-slots">
+                <% classTimes.forEach(function(time) {
+                    let isBooked = bookedTimes.includes(time.day + ' at ' + time.time); %>
+                    <button type="button" class="time-slot<%= isBooked ? ' booked' : '' %>"
+                        data-day="<%= time.day %>" data-time="<%= time.time %>"
+                        <%= isBooked ? 'disabled' : '' %>>
+                        <%= time.day %> at <%= time.time %>
+                    </button>
+                <% }); %>
+            </div>
+
+            <!-- User Input Form -->
+            <form action="/submit-booking" method="post" class="booking-form">
+                <div class="input-row">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="text" name="reason" placeholder="Reason for Booking" required>
+                    <input type="text" name="selectedTime" placeholder="Selected Time" readonly required>
+                    <input type="hidden" name="course" value="<%= course %>">
+                </div>
+                <div class="form-buttons">
+                    <button type="submit" class="submit-btn">Submit</button>
+                    <button type="button" onclick="window.location.href='/'" class="go-back-btn">Go Back</button>
+                </div>
+            </form>
+        <% } else { %>
+            <p>No schedule available for the selected course.</p>
+        <% } %>
+    </div>
+
+    <button onclick="location.href='/manage-bookings'" class="manage-bookings-btn">Manage My Bookings</button>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const timeSlotButtons = document.querySelectorAll('.time-slot:not(.booked)');
+            const selectedTimeInput = document.querySelector('input[name="selectedTime"]');
+
+            timeSlotButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    selectedTimeInput.value = this.dataset.day + ' at ' + this.dataset.time;
+                    timeSlotButtons.forEach(btn => btn.classList.remove('selected'));
+                    this.classList.add('selected');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
