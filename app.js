@@ -32,6 +32,8 @@ const classSchedules = {
         { day: 'Thursday', time: '6:00 PM' },
     ],
     'ITE449': [
+        { day: 'Tuesday', time: '2:00 PM' },
+        { day: 'Tuesday', time: '3:30 PM' },
         { day: 'Friday', time: '6:00 PM' },
         { day: 'Friday', time: '7:30 PM' },
     ],
