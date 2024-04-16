@@ -19,24 +19,18 @@ async function connectToDatabase() {
 }
 
 const classSchedules = {
-    'CS440': [
-        { day: 'Monday', time: '9:00 AM' },
-        { day: 'Monday', time: '12:30 PM' },
-        { day: 'Wednesday', time: '2:00 PM' },
-        { day: 'Wednesday', time: '3:30 PM' },
+    'CIS376': [
+        { day: 'Tuesday', time: '9:00 AM' },
+        { day: 'Tuesday', time: '12:30 PM' },
+        { day: 'Thursday', time: '2:00 PM' },
+        { day: 'Thursday', time: '3:30 PM' },
     ],
-    'CS455': [
+    'CIS486': [
         { day: 'Tuesday', time: '10:30 AM' },
         { day: 'Tuesday', time: '1:00 PM' },
         { day: 'Thursday', time: '4:30 PM' },
         { day: 'Thursday', time: '6:00 PM' },
-    ],
-    'ITE449': [
-        { day: 'Tuesday', time: '2:00 PM' },
-        { day: 'Tuesday', time: '3:30 PM' },
-        { day: 'Friday', time: '6:00 PM' },
-        { day: 'Friday', time: '7:30 PM' },
-    ],
+    ]
 };
 
 app.get('/', (req, res) => {
