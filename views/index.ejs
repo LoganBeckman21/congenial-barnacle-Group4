@@ -8,6 +8,30 @@
 </head>
 <body>
     <div class="container">
+<!--  nav bar  -->
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+      <a class="navbar-brand" href="#">Request Office Hours</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Check this page's validation</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
         <h1>Select a Class to View Its Schedule</h1>
         <form action="/schedule" method="get" class="form-select">
             <select name="course" class="select-class">
