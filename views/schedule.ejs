@@ -24,12 +24,12 @@
             <form action="/submit-booking" method="post" class="booking-form">
                 <div class="input-row">
                     <input type="text" name="name" placeholder="Your Name" required>
-                    <label for="reasoning>Choose a reason for booking:</label>
+                    <label for="reasoning" >Choose a reason for booking: </label>
                     <select name="reasoning" id="reason">
                       <option value="meeting">Meeting</option>
                       <option value="assignment">Assignment</option>
                       <option value="advising">Advising</option>
-                    </select> required>
+                    </select>
                     <input type="text" name="selectedTime" placeholder="Selected Time" readonly required>
                     <input type="hidden" name="course" value="<%= course %>">
                 </div>
