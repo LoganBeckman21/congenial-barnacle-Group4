@@ -1,23 +1,21 @@
 require('dotenv').config();
 const express = require('express');
 const { MongoClient, ObjectId } = require('mongodb');
+const path = require('path');
 const app = express();
 const port = process.env.PORT || 5500;
 
 app.set('view engine', 'ejs');
-app.use(express.static('public'));
+app.set('views', path.join(__dirname, 'views'));
+app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.urlencoded({ extended: true }));
 
 const uri = process.env.MONGODB_URI;
-let db;
 
 async function connectToDatabase() {
-    if (!db) {
-        const client = new MongoClient(uri);
-        await client.connect();
-        db = client.db('Group4-database');
-    }
-    return db;
+    const client = new MongoClient(uri);
+    await client.connect();
+    return client.db('Group4-database');
 }
 
 const classSchedules = {
@@ -45,11 +43,12 @@ app.get('/', (req, res) => {
 
 app.get('/schedule', async (req, res) => {
     const selectedCourse = req.query.course;
-    const db = await connectToDatabase();
-    const bookings = db.collection('Group4-collection');
-
     try {
+        const db = await connectToDatabase();
+        const bookings = db.collection('Group4-collection');
+
         const bookedTimes = await bookings.find({ course: selectedCourse }).toArray();
+
         res.render('schedule', {
             classTimes: classSchedules[selectedCourse] || [],
             bookedTimes: bookedTimes.map(b => b.selectedTime),
@@ -81,7 +80,6 @@ app.post('/submit-booking', async (req, res) => {
 });
 
 
-// Route to handle updating a booking
 app.post('/update-booking', async (req, res) => {
     const { bookingId, newName, newTime } = req.body;
   
@@ -117,7 +115,7 @@ app.post('/update-booking', async (req, res) => {
       res.status(500).send('Error deleting your booking.');
     }
   });
-  
+
   app.get('/manage-bookings', async (req, res) => {
     const db = await connectToDatabase();
     const bookingsCollection = db.collection('Group4-collection');
@@ -132,14 +130,80 @@ app.post('/update-booking', async (req, res) => {
     }
 });
 
+app.get('/index', async (req, res) => {
+    res.render('index');
+    
+});
+
+app.get('/login', async (req, res) => {
+    res.render('login');
+    
+});
+
+app.get('/register', async (req, res) => {
+    res.render('register');
+    
+});
+
   app.get('/my-bookings', async (req, res) => {
     const userEmail = req.query.email; // Use authentication mechanism to get user's email
     const userBookings = await db.collection('Group4-collection').find({ email: userEmail }).toArray();
     res.render('my-bookings', { bookings: userBookings });
 });
 
-connectToDatabase().then(() => {
-    app.listen(port, () => {
-        console.log(`Server running on port ${port}`);
-    });
-}).catch(console.error);
+  app.post('/register', async (req, res) => {
+    try{
+        let foundUser = users.find((data) => req.body.email === data.email);
+        if (!foundUser) {
+    
+            let hashPassword = await bcrypt.hash(req.body.password, 10);
+    
+            let newUser = {
+                id: Date.now(),
+                username: req.body.username,
+                email: req.body.email,
+                password: hashPassword,
+            };
+            users.push(newUser);
+            console.log('User list', users);
+    
+            res.send("<div align ='center'><h2>Registration successful</h2></div><br><br><div align='center'><a href='./login.html'>login</a></div><br><br><div align='center'><a href='./registration.html'>Register another user</a></div>");
+        } else {
+            res.send("<div align ='center'><h2>Email already used</h2></div><br><br><div align='center'><a href='./registration.html'>Register again</a></div>");
+        }
+    } catch{
+        res.send("Internal server error");
+    }
+});
+
+app.post('/login', async (req, res) => {
+    try{
+        let foundUser = users.find((data) => req.body.email === data.email);
+        if (foundUser) {
+    
+            let submittedPass = req.body.password; 
+            let storedPass = foundUser.password; 
+    
+            const passwordMatch = await bcrypt.compare(submittedPass, storedPass);
+            if (passwordMatch) {
+                let usrname = foundUser.username;
+                res.send(`<div align ='center'><h2>login successful</h2></div><br><br><br><div align ='center'><h3>Hello ${usrname}</h3></div><br><br><div align='center'><a href='./login.html'>logout</a></div>`);
+            } else {
+                res.send("<div align ='center'><h2>Invalid email or password</h2></div><br><br><div align ='center'><a href='./login.html'>login again</a></div>");
+            }
+        }
+        else {
+    
+            let fakePass = `$2b$$10$ifgfgfgfgfgfgfggfgfgfggggfgfgfga`;
+            await bcrypt.compare(req.body.password, fakePass);
+    
+            res.send("<div align ='center'><h2>Invalid email or password</h2></div><br><br><div align='center'><a href='./login.html'>login again<a><div>");
+        }
+    } catch{
+        res.send("Internal server error");
+    }
+});
+
+app.listen(port, () => {
+    console.log(`Server running on port ${port}`);
+});

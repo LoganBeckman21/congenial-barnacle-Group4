@@ -5,6 +5,23 @@
     <title>Schedule for <%= course %></title>
     <link rel="stylesheet" href="/css/style.css">
 </head>
+
+
+<div class="topnav">
+    <!--  nav bar  -->
+      <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+          <a class="navbar-brand" href="#">Request Office Hours</a>
+                <a class="nav-link" href="https://github.com/LoganBeckman21/congenial-barnacle-Group4/blob/main/README.md">About</a>
+                <a class="nav-link" onclick="location.href='/index'">Home</a>
+                <a class="nav-link" onclick="location.href='/login'">Login</a>
+                <a class="nav-link" onclick="location.href='/register'">Register</a>
+                <a class="nav-link" onclick="location.href='/manage-bookings'" class="manage-bookings-btn">Manage My Bookings</a>
+                
+              
+            
+          
+        </div>
+
 <body>
     <div class="schedule-container">
         <h1>Schedule for <%= course %></h1>
@@ -37,13 +54,13 @@
                     <button type="submit" class="submit-btn">Submit</button>
                     <button type="button" onclick="window.location.href='/'" class="go-back-btn">Go Back</button>
                 </div>
+                
             </form>
         <% } else { %>
             <p>No schedule available for the selected course.</p>
         <% } %>
     </div>
 
-    <button onclick="location.href='/manage-bookings'" class="manage-bookings-btn">Manage My Bookings</button>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -59,5 +76,11 @@
             });
         });
     </script>
+
+
+
+
 </body>
+
+
 </html>

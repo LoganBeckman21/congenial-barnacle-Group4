@@ -3,12 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Select a Class to View Its Schedule</title>
+    <title>Welcome to Dr. Cumbies Office Hours!</title>
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-    <div class="container">
+    <div class="topnav">
+        <!--  nav bar  -->
+          <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+              <a class="navbar-brand" href="#">Request Office Hours</a>
+                    <a class="nav-link" href="https://github.com/LoganBeckman21/congenial-barnacle-Group4/blob/main/README.md">About</a>
+                    <a class="nav-link" onclick="location.href='/index'">Home</a>
+                    <a class="nav-link" onclick="location.href='/login'">Login</a>
+                    <a class="nav-link" onclick="location.href='/register'">Register</a>
+                    <a class="nav-link" onclick="location.href='/manage-bookings'" class="manage-bookings-btn">Manage My Bookings</a>
+        
+                    
+                  
+                
+              
+            </div> 
+        
+      
+     <div class="container">
         <h1>Select a Class to View Its Schedule</h1>
+        <H3>Please select your class below to view the available office hours that I have. </H3>
         <form action="/schedule" method="get" class="form-select">
             <select name="course" class="select-class">
                 <option value="CS440">CS 440</option>
@@ -18,5 +36,13 @@
             <button type="submit" class="btn-view">View Schedule</button>
         </form>
     </div>
+
+    <br><br><br><br>
+
 </body>
+
+<footer class="container-fluid text-center">
+    <p>Office Hour Application Group 4 - Cumbie © 2024</p>
+  </footer>
+
 </html>

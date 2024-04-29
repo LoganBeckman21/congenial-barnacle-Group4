@@ -5,6 +5,21 @@
     <title>My Bookings</title>
     <!-- Include your stylesheet here -->
 </head>
+<div class="topnav">
+    <!--  nav bar  -->
+      <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+          <a class="navbar-brand" href="#">Request Office Hours</a>
+                <a class="nav-link" href="https://github.com/LoganBeckman21/congenial-barnacle-Group4/blob/main/README.md">About</a>
+                <a class="nav-link" href="/views/index.ejs">Home</a>
+                <a class="nav-link" href="/views/login.ejs">Login</a>
+                <a class="nav-link" href="/views/register.ejs">Register</a>
+    
+                
+              
+            
+          
+        </div>
+
 <body>
     <h1>My Bookings</h1>
     <% bookings.forEach(booking => { %>
@@ -28,4 +43,8 @@
         </div>
     <% }); %>
 </body>
+
+<footer class="container-fluid text-center">
+    <p>Office Hour Application Group 4 - Cumbie © 2024</p>
+  </footer>
 </html>
