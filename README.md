@@ -17,7 +17,7 @@ Welcome to our easy-to-use app that helps you book and manage office hours with 
 
 ### [Team Members](https://github.com/LoganBeckman21/congenial-barnacle-Group4/wiki/Team-Attributions)
 ### [Team Attributions](https://github.com/LoganBeckman21/congenial-barnacle-Group4/wiki/Team-Attributions)
-### [Pesentation](https://docs.google.com/presentation/d/1DFXf4ar-lnmmlyY_o5VJ-RXmk9oBGiQjnLiZAusLrxA/edit?usp=sharing)
+### [Presentation](https://docs.google.com/presentation/d/1DFXf4ar-lnmmlyY_o5VJ-RXmk9oBGiQjnLiZAusLrxA/edit?usp=sharing)
 
 
 
