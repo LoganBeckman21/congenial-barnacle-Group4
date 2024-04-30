@@ -1,9 +1,12 @@
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+    color: whitesmoke;
     line-height: 1.6;
     zoom: 175%;
+    background-image: url("https://media.tegna-media.com/assets/WZDX/images/f01c5494-b00c-4d70-be91-7e368fb35c1d/f01c5494-b00c-4d70-be91-7e368fb35c1d_1140x641.jpg");
+    background-repeat: no-repeat;
+    background-size: 900px;
+    
 }
 
 .container {
@@ -36,7 +39,7 @@ h3 {
 
 .btn-view {
     padding: 10px 20px;
-    background-color: #5cb85c;
+    background-color: goldenrod;
     color: white;
     border: none;
     border-radius: 5px;
@@ -45,7 +48,7 @@ h3 {
 }
 
 .btn-view:hover {
-    background-color: #4cae4c;
+    background-color: goldenrod;
 }
 
 .schedule-container {
@@ -88,14 +91,13 @@ h3 {
 
 .time-slot {
     padding: 15px;
-    background-color: yellow;
+    background-color: goldenrod;
     border: 1px solid purple;
-    text-decoration-color: black;
     cursor: pointer;
 }
 
 .time-slot:hover {
-    background-color: #bbd2f5;
+    background-color:mediumpurple;
 }
 
 /* ... your existing CSS code ... */
@@ -119,7 +121,7 @@ h3 {
 }
 
 .go-back-btn:hover {
-    background-color:mediumpurple;
+    background-color: #a4a5a5;
 }
 
 /* ... other styles ... */
