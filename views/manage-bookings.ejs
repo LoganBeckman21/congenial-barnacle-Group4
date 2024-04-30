@@ -1,3 +1,4 @@
+
 <link rel="stylesheet" href="/css/manage.css">
 
 <div class="topnav">
@@ -15,26 +16,24 @@
       </div>
 
 
-<% bookings.forEach(booking => { %>
-    <div class="booking">
+<% bookings.forEach(function(booking) { %>
+  <div>
       <p>Course: <%= booking.course %></p>
       <p>Time: <%= booking.selectedTime %></p>
-      
-      <!-- Form to update a booking -->
-      <form action="/update-booking" method="post">
-        <input type="hidden" name="bookingId" value="<%= booking._id %>">
-        <input type="text" name="newName" placeholder="New Name" value="<%= booking.name %>">
-        <input type="text" name="newTime" placeholder="New Time" value="<%= booking.selectedTime %>">
+      <form method="post" action="/update-booking">
+        <input type="hidden" name="bookingId" value="<%= booking._id %>" />
+        <input type="text" name="newName" placeholder="Enter new name" value="<%= booking.name %>" required />
+        <input type="text" name="newTime" placeholder="Enter new time" value="<%= booking.selectedTime %>" required />
         <button type="submit">Update</button>
-      </form>
-  
-      <!-- Form to delete a booking -->
+    </form>
+    
       <form action="/delete-booking" method="post">
-        <input type="hidden" name="bookingId" value="<%= booking._id %>">
-        <button type="submit">Delete</button>
+          <input type="hidden" name="bookingId" value="<%= booking._id %>" />
+          <button type="submit">Delete</button>
       </form>
-    </div>
-  <% }); %>
+  </div>
+<% }); %>
+
   
 
   <footer class="container-fluid text-center">

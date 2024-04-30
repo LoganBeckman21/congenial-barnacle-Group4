@@ -1,3 +1,4 @@
+
 require('dotenv').config();
 const express = require('express');
 const { MongoClient, ObjectId } = require('mongodb');
@@ -81,40 +82,55 @@ app.post('/submit-booking', async (req, res) => {
 
 
 app.post('/update-booking', async (req, res) => {
+    console.log("Received update request with data:", req.body);
+
     const { bookingId, newName, newTime } = req.body;
-  
-    try {
-      const db = await connectToDatabase(); // This assumes you have a function to connect to your DB
-      const bookings = db.collection('bookings');
-  
-      await bookings.updateOne(
-        { _id: new ObjectId(bookingId) },
-        { $set: { name: newName, selectedTime: newTime } }
-      );
-  
-      res.redirect('/manage-bookings');
-    } catch (err) {
-      console.error(err);
-      res.status(500).send('Error updating your booking.');
+    if (!bookingId || !newName || !newTime) {
+        console.error("Missing data for update:", req.body);
+        return res.status(400).send("Missing data for update");
     }
-  });
-  
-  // Route to handle deleting a booking
-  app.post('/delete-booking', async (req, res) => {
+
+    try {
+        const db = await connectToDatabase();
+        const bookings = db.collection('Group4-collection');
+
+        const result = await bookings.updateOne(
+            { _id: new ObjectId(bookingId) },
+            { $set: { name: newName, selectedTime: newTime } }
+        );
+        
+        console.log("MongoDB Update Result:", result);
+
+        if (result.matchedCount === 0) {
+            console.error("No booking found with ID:", bookingId);
+            return res.status(404).send("No booking found with the specified ID");
+        }
+
+        if (result.modifiedCount === 0) {
+            console.log("No changes made to the booking.");
+        }
+
+        res.redirect('/manage-bookings');
+    } catch (err) {
+        console.error("Error updating booking:", err);
+        res.status(500).send('Error updating your booking.');
+    }
+});
+
+
+app.post('/delete-booking', async (req, res) => {
     const { bookingId } = req.body;
-  
     try {
-      const db = await connectToDatabase();
-      const bookings = db.collection('bookings');
-  
-      await bookings.deleteOne({ _id: new ObjectId(bookingId) });
-  
-      res.redirect('/manage-bookings');
+        const db = await connectToDatabase();
+        const bookings = db.collection('Group4-collection');
+        await bookings.deleteOne({ _id: new ObjectId(bookingId) });
+        res.redirect('/manage-bookings');
     } catch (err) {
-      console.error(err);
-      res.status(500).send('Error deleting your booking.');
+        console.error(err);
+        res.status(500).send('Error deleting your booking.');
     }
-  });
+});
+
 
   app.get('/manage-bookings', async (req, res) => {
     const db = await connectToDatabase();

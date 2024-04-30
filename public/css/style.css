@@ -1,12 +1,9 @@
+
 body {
     font-family: 'Arial', sans-serif;
-    color: white;
+    background-color: #f4f4f4;
+    color: #333;
     line-height: 1.6;
-    zoom: 150%;
-    background-image: url("https://www.una.edu/pressroom/2023/img/lightthefountain.jpg");
-    background-repeat: no-repeat;
-    background-size: 1050px;
-    
 }
 
 .container {
@@ -16,11 +13,6 @@ body {
 }
 
 h1 {
-    text-align: center;
-    margin: 40px 0;
-}
-
-h3 {
     text-align: center;
     margin: 40px 0;
 }
@@ -39,7 +31,7 @@ h3 {
 
 .btn-view {
     padding: 10px 20px;
-    background-color: goldenrod;
+    background-color: #5cb85c;
     color: white;
     border: none;
     border-radius: 5px;
@@ -48,7 +40,7 @@ h3 {
 }
 
 .btn-view:hover {
-    background-color: goldenrod;
+    background-color: #4cae4c;
 }
 
 .schedule-container {
@@ -62,7 +54,7 @@ h3 {
 
 .time-block {
     padding: 10px 20px;
-    background-color: goldenrod;
+    background-color: #007bff;
     /* Bootstrap primary color */
     color: white;
     border-radius: 5px;
@@ -91,9 +83,8 @@ h3 {
 
 .time-slot {
     padding: 15px;
-    background-color: goldenrod;
-    border: 1px solid lightyellow;
-    text-decoration-color: black;
+    background-color: #007bff;
+    border: 1px solid #8ab8f5;
     cursor: pointer;
 }
 
@@ -187,22 +178,3 @@ h3 {
     background-color: #ddd;
     color: black;
   }
-
-  footer {
-    text-align: center;
-    left: 0;
-    right: 0;
-    background-color: purple; /* purple background color */
-      color: #ffffff; /* White text color */
-      padding: 2px 0; /* Add some padding for better visual */
-  }
-
-  .img {
-    opacity: 1;
-    display: block;
-    width: 100%;
-    height: 200px;
-    transition: .5s ease;
-    backface-visibility: hidden;
-  }
-  
