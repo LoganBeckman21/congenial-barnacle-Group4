@@ -88,8 +88,8 @@ h3 {
 
 .time-slot {
     padding: 15px;
-    background-color: #007bff;
-    border: 1px solid #8ab8f5;
+    background-color: yellow;
+    border: 1px solid purple;
     cursor: pointer;
 }
 
@@ -118,7 +118,7 @@ h3 {
 }
 
 .go-back-btn:hover {
-    background-color: #a4a5a5;
+    background-color:mediumpurple;
 }
 
 /* ... other styles ... */
