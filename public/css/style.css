@@ -178,3 +178,12 @@ h1 {
     background-color: #ddd;
     color: black;
   }
+
+footer {
+    text-align: center;
+    left: 0;
+    right: 0;
+    background-color: purple; /* purple background color */
+      color: #ffffff; /* White text color */
+      padding: 2px 0; /* Add some padding for better visual */
+  }
